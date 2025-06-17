@@ -113,17 +113,6 @@ if (numero >= 0){
 };
 ```
 
-## Bucles
-
-Los bucles son aquellos ciclos que ejecutaran un bloque de codigo simultaneamente hasta que nosotros se lo indiquemos por medio de una condicion (o simplemente se ejecuten infinitamente).
-
-Dentro de estos encontraremos los siguientes:
-
-- `while`: ejecuta un bloque de codigo si la condicion es verdadera, cabe aclarar que tenemos que darle un alto al bucle para que no se ejecute infinitamente y de errores a futuro.
-```javascript
-while
-```
-
 ## ARRAYS
 
 ### ¿Que es un "array"?
@@ -158,4 +147,87 @@ let camioneta = {
     espacioEnCabina: "doble"
 };
 console.log(camioneta["marca"]); //muestra en consola el valor de la clave "marca" que seria "ford"
+```
+
+## Bucles
+
+Los bucles son aquellos ciclos que ejecutaran un bloque de codigo simultaneamente hasta que nosotros se lo indiquemos por medio de una condicion (o simplemente se ejecuten infinitamente).
+
+Dentro de estos encontraremos los siguientes:
+
+- `while`: Ejecuta un bloque de codigo si la condicion es verdadera, cabe aclarar que tenemos que darle un alto al bucle para que no se ejecute infinitamente y de errores a futuro.
+    ```javascript
+    let ciclo = 10;
+    //imprime en consola un conteo del 10 al 0
+    while (ciclo >= 0){
+        console.log(ciclo);
+        ciclo--;
+    };
+    ```
+
+- `for`: Ejecuta un bloque hasta que una condición especificada se evalúe como falsa, la diferencia con el bucle *while* radica que el bucle *for* se basa en una estructura ya definida donde nosotros especificamos, una variable de inicializacion, la condicion, y una expresion por iteracion.
+    ```javascript
+    for ([inicializacion]; [condicion]; [expresionPorIteracion]){
+        codigo a ejecutar
+    }
+    ```
+    *ejemplo practico:*
+    ```javascript
+    //imprimirá en consola un conteo del 10 al 0
+    for (let i = 10; i > 0; i--){
+        console.log(i);
+    };
+    ```
+
+- `for in / for of`: Ambos son principalmente usados para iterar sobre los elementos de un objeto como arrays, strings o maps, la diferencia es que el `for in` itera sobre el indice de los elementos dentro de un objeto mientras que `for of` trabaja con el valor de esa misma posicion.
+
+    *for in*
+    ```javascript
+    let animales = ["perro", "gato", "mapache"];
+    for (animal in animales){
+        console.log(animal);//devolvera el indice
+    };
+    ```
+    *for of*
+    ```javascript
+    let animales = ["perro", "gato", "mapache"];
+    for (animal of animales){
+        console.log(animal);//devolvera el valor
+    };
+    ```
+### Sentencia `continue`
+
+Una sentencia es una instruccion que se le da a un proceso para alterar su flujo en la ejecucion, en los bucles podemos usar sentencias para alterar el comportamiento en los ciclos de nuestro bucle, una de las sentencias mas utilizadas es "*continue*".
+
+Esta instruccion se encarga de que el bucle, llegado hasta cierto punto se reinicie, ignorando lo que le sigue y volviendo a empezar, como si le dijeran a un corredor a mitad de la carrera "ve al punto de partida, pero devolviendo tus pasos", esto se usa mas que nada cuando queremos ignorar porciones de codigo de nuestro bucle que no hace falta ejecutar si se cumple un proposito y asi volver a empezar un bucle, usado mas que nada en menus.
+
+*ejemplo practico*
+```javascript
+let i = 10;
+//conteo del 10 al 0 omitiendo el 5
+while (i >= 0){
+    if (i == 5){
+        i--;
+        continue;
+    };
+    console.log(i);
+    i--;
+};
+```
+
+### Sentencia `break`
+
+Se emplea de la misma manera con la que usamos *continue* solo que a diferencia de omitir una porcion de codigo no requerida, este lo que hace es romper ese bucle, es decir, detenerlo, usado cuando ya no queremos que el bucle siga corriendo y se detenga en cierto punto.
+
+*ejemplo practico*
+```javascript
+let estudiantes = ["eduardo", "adrian", "samuel", "santiago"];
+
+//recorre los indices del array "estudiantes"
+for (estudiante in estudiantes){
+    if (estudiante == 2){
+        break; //rompe la iteracion del bucle al llegar a la posicion 2
+    };
+    console.log(estudiantes[estudiante]);//accede al valor del elemento en esa posicion
+};
 ```
