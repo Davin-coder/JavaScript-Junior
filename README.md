@@ -115,7 +115,7 @@ if (numero >= 0){
 
 ### Ejercicio de practica
 
-Crea un programa que sea capaz de diferenciar entre personas mayores y menores de edad, imprimiendo en consola el nombre de la persona, su edad, y un mensaje si cumple o no la mayoria de edad.
+Ingresa a la carpeta **Ejercicio-condicionales**
 
 ## ARRAYS
 
@@ -244,9 +244,56 @@ Una funcióm en JavaScript y en el ambito de la programación en general, es un 
 
 Las funciones esperan de parte nuestra una serie de parametros (opcional) para luego retornarnos un valor según las instrucciones que nosotros definamos dentro de ella.
 
-*ejemplo practico*
+### ¿Como se declara una función?
+
+Para declarar una funcion primero tenemos que definirle un nombre unico a nuestra funcion, definir los parametros que recibirá (opcional), el bloque que va a ejecutar internamente, y el valor que nos va a retornar una vez finalizada la funcion. Contamos con tres principales formas para declarar una funcion, cada una muy util segun las circunstancias que lo ameriten.
+
+**1. Declaración de función (Function Declaration):**
 ```javascript
-function mensajeInicial (nombre, instruccion){
+//declaracion
+function saludar (nombre){
+    let mensaje = ("hola, tu nombre es: " + nombre);
+    return mensaje;
+};
+//llamada de la funcion dentro de un console.log para imprimirlo en consola
+console.log(saludar("alex"));
+```
+Esta es la manera mas basica para declarar una funcion, definimos su nombre, valores de entrada(opcional), el codigo con el que trabajará internamente y el valor que nos retornará, no es muy utilizada en la actualidad pero si es facil de entender.
+
+**2. Expresión de función (Function Expression):**
+```javascript
+//se expresa la funcion asignandosela a una variable
+const saludar = function(nombre){
+    let mensaje = ("hola, tu nombre es: " + nombre);
+    return mensaje;
+};
+
+console.log(saludar("edinson"));
+```
+Esta alternativa funciona igual que una declaracion de función, solo que esta se le asigna a una variable creando una expresión.
+
+**3. Funciones flecha (Arrow Functions):**
+
+*estructura*
+```javascript
+const nombreDeTuFuncion = (parametros) => {
+    codigo a realizar;
+    return valor a regresar;
+};
+```
+Una de las alternativas mas recomendables y usadas a la hora de trabajar con funciones, ya que esta te proporciona algunas ventajas que las otras no pueden, por ejemplo;
+
+ cuando tengas una funcion con una sola expresión a realizar, no hara falta abrir con llaves e incluso si la funcion solo requiere un parametro, no hará falta cerrarlo en parentesis, si no que podras escribir en esa misma linea el valor que retornará.
+*ejemplo*
+```javascript
+const saludar = nombre => "hola, tu nombre es: " + nombre;
+
+console.log(saludar("antonio"));
+```
+
+**ejemplo practico**
+```javascript
+const mensajeInicial = function(nombre, instruccion){
     let mensaje;
     if (instruccion == "saludar"){
         mensaje = ("Bienvenido " + nombre);
@@ -254,24 +301,11 @@ function mensajeInicial (nombre, instruccion){
     }else if (instruccion == "despedir"){
         mensaje = ("Ten un buen dia " + nombre);
         return mensaje;
-    }
-}
+    };
+};
 //variables con las que trabajara nuestra funcion
 let persona = "adrian";
 let instruccion = "despedir";
 
-oracion = mensajeInicial(persona, instruccion);//esto es igual a -> mensajeInicial("adrian", "despedir")
-
-console.log(oracion); //muestra en consola el valor de la variable oracion obtenido del valor retornado por nuestra funcion
-```
-
-### ¿Como se declara una función?
-
-Para declarar una funcion primero tenemos que definirle un nombre unico a nuestra funcion, definir los parametros que recibirá (opcional), el bloque que va a ejecutar internamente, y el valor que nos va a retornar una vez finalizada la funcion. Contamos con tres principales formas para declarar una funcion, cada una muy util segun las circunstancias que lo ameriten.
-
-*manera 1*
-```javascript
-function saludar (nombre){
-    
-}
+console.log(mensajeInicial(persona, instruccion));//retorna "ten un buen dia adrian"
 ```
