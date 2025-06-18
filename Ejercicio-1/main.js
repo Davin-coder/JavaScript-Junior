@@ -1,0 +1,3 @@
+// Aqui podras emplear tu solucion para el problema empleado en el README, recuerda no solo hacer el ejercicio de ejemplo si no adentrarte mas a los temas e intentar probar cosas nuevas, así poder tener un mejor dominio del lenguaje
+
+// Adicionalmente agregé un archivo html donde tu lo tendrás que correr en tiempo real con la extension "live server" y asi probar tu codigo en la consola del navegador.

@@ -113,6 +113,10 @@ if (numero >= 0){
 };
 ```
 
+### Ejercicio de practica
+
+Crea un programa que sea capaz de diferenciar entre personas mayores y menores de edad, imprimiendo en consola el nombre de la persona, su edad, y un mensaje si cumple o no la mayoria de edad.
+
 ## ARRAYS
 
 ### ¿Que es un "array"?
@@ -230,4 +234,44 @@ for (estudiante in estudiantes){
     };
     console.log(estudiantes[estudiante]);//accede al valor del elemento en esa posicion
 };
+```
+
+## Funciones
+
+### ¿Que es una función?
+
+Una funcióm en JavaScript y en el ambito de la programación en general, es un bloque de codigo reutizilable cuyo proposito principal es que se pueda usar varias veces dentro de nuestro codigo sin necesidad de saturarlo.
+
+Las funciones esperan de parte nuestra una serie de parametros (opcional) para luego retornarnos un valor según las instrucciones que nosotros definamos dentro de ella.
+
+*ejemplo practico*
+```javascript
+function mensajeInicial (nombre, instruccion){
+    let mensaje;
+    if (instruccion == "saludar"){
+        mensaje = ("Bienvenido " + nombre);
+        return mensaje; //valor de la variable que queremos retornar
+    }else if (instruccion == "despedir"){
+        mensaje = ("Ten un buen dia " + nombre);
+        return mensaje;
+    }
+}
+//variables con las que trabajara nuestra funcion
+let persona = "adrian";
+let instruccion = "despedir";
+
+oracion = mensajeInicial(persona, instruccion);//esto es igual a -> mensajeInicial("adrian", "despedir")
+
+console.log(oracion); //muestra en consola el valor de la variable oracion obtenido del valor retornado por nuestra funcion
+```
+
+### ¿Como se declara una función?
+
+Para declarar una funcion primero tenemos que definirle un nombre unico a nuestra funcion, definir los parametros que recibirá (opcional), el bloque que va a ejecutar internamente, y el valor que nos va a retornar una vez finalizada la funcion. Contamos con tres principales formas para declarar una funcion, cada una muy util segun las circunstancias que lo ameriten.
+
+*manera 1*
+```javascript
+function saludar (nombre){
+    
+}
 ```
