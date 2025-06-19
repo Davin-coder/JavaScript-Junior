@@ -1,4 +1,23 @@
-# ¿Que es JavaScript?
+# Conociendo JavaScript
+
+## Indice
+
+- [Introducción](#introducción)
+- [Concepto](#concepto)
+- [Variables](#variables)
+- [Operadores](#operadores)
+- [Arrays](#arrays)
+- [Bucles](#bucles)
+- [Funciones](#funciones)
+- [POO](#poo-programacion-orientada-a-objetos)
+
+## Introducción
+
+Bienvenido a "Conociendo JavaScript", este es un repositorio creado por mi enfocado en explicar no solo la logica, si no tambien de manera clara y concisa los distintos aspectos que poseé JavaScript y como emplearlos de la mejor manera. Refuerza tu logica con los distintos ejemplos y ejercicios practicos que te voy a ofrecer aquí, y recuerda, ir practicando mientras vas aprendiendo sobre cada tema para afianzar de mejor manera los conceptos.
+
+## Concepto
+
+### ¿Que es JavaScript?
 
 JavaScript es un lenguaje de programación de alto nivel principalmente usado para el diseño web agregandole dinamismo a la interaccion entre el usuario y una pagina web.
 
@@ -115,7 +134,7 @@ if (numero >= 0){
 
 ### Ejercicio de practica
 
-Ingresa a la carpeta **Ejercicio-condicionales**
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-condicionales](./Ejercicio-condicionales/main.js)
 
 ## ARRAYS
 
@@ -152,6 +171,10 @@ let camioneta = {
 };
 console.log(camioneta["marca"]); //muestra en consola el valor de la clave "marca" que seria "ford"
 ```
+
+### Ejercicio de practica
+
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-arrays](./Ejercicio-arrays/main.js)
 
 ## Bucles
 
@@ -225,14 +248,14 @@ Se emplea de la misma manera con la que usamos *continue* solo que a diferencia 
 
 *ejemplo practico*
 ```javascript
-let estudiantes = ["eduardo", "adrian", "samuel", "santiago"];
+let coders = ["eduardo", "adrian", "maria", "santiago"];
 
 //recorre los indices del array "estudiantes"
-for (estudiante in estudiantes){
-    if (estudiante == 2){
+for (coder in coders){
+    if (coder == 2){
         break; //rompe la iteracion del bucle al llegar a la posicion 2
     };
-    console.log(estudiantes[estudiante]);//accede al valor del elemento en esa posicion
+    console.log(coders[coder]);//accede al valor del elemento en esa posicion
 };
 ```
 
@@ -309,3 +332,8 @@ let instruccion = "despedir";
 
 console.log(mensajeInicial(persona, instruccion));//retorna "ten un buen dia adrian"
 ```
+
+## POO (Programacion orientada a objetos)
+
+La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, en lugar de funciones y lógica, es decir, permite estructurar nuestro codigo en base a unos objetos que nosotros creamos y lo definimos con una serie de propiedades (clases, atributos, herencia...), esto para mejorar la legibilidad y ordenar de mejor manera nuestro codigo.
+
