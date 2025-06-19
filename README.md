@@ -131,7 +131,6 @@ if (numero >= 0){
     console.log("el dato ingresado no es un numero");
 };
 ```
-
 ### Ejercicio de practica
 
 Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-condicionales](./Ejercicio-condicionales/main.js)
@@ -171,7 +170,6 @@ let camioneta = {
 };
 console.log(camioneta["marca"]); //muestra en consola el valor de la clave "marca" que seria "ford"
 ```
-
 ### Ejercicio de practica
 
 Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-arrays](./Ejercicio-arrays/main.js)
@@ -258,6 +256,9 @@ for (coder in coders){
     console.log(coders[coder]);//accede al valor del elemento en esa posicion
 };
 ```
+### Ejercicio de practica
+
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Bucles](./Ejercicio-Bucles/main.js)
 
 ## Funciones
 
@@ -332,8 +333,11 @@ let instruccion = "despedir";
 
 console.log(mensajeInicial(persona, instruccion));//retorna "ten un buen dia adrian"
 ```
+### Ejercicio de practica
+
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones](./Ejercicio-Funciones/main.js)
 
 ## POO (Programacion orientada a objetos)
 
-La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, en lugar de funciones y lógica, es decir, permite estructurar nuestro codigo en base a unos objetos que nosotros creamos y lo definimos con una serie de propiedades (clases, atributos, herencia...), esto para mejorar la legibilidad y ordenar de mejor manera nuestro codigo.
+La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, en lugar de funciones y lógica, es decir, permite estructurar nuestro codigo de mejor forma haciendo uso de objetos que nosotros creamos y les definimos una serie de propiedades o comportamientos (clases, atributos, herencia...), esto para mejorar la logica y ordenar de mejor manera varias de las funcionalidades de nuestro codigo.
 
