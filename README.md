@@ -25,19 +25,19 @@ Es usado tambien en distintas tecnologias Frontend como Angular, React o Vue.js 
 
 ### JavaScript cuenta con las siguientes cualidades:
 
-- Lenguaje interpretado: no necesita ser compilado para poder ejecutarse, si no que el propio navegador lo interpreta.
+- **Lenguaje interpretado** : no necesita ser compilado para poder ejecutarse, si no que el propio navegador lo interpreta.
 
-- Lenguaje orientado a objetos: abarca muchas de las funcionalidades que tienen los lenguajes orientado a objetos ( uso de clases, herencia, polimorfismo...).
+- **Lenguaje orientado a objetos** : abarca muchas de las funcionalidades que tienen los lenguajes orientado a objetos ( uso de clases, herencia, polimorfismo...).
 
-- Lenguaje imperativo: el codigo se ejecutará linea por linea hasta llegar al final o se detenga por un error en el camino.
+- **Lenguaje imperativo** : el codigo se ejecutará linea por linea hasta llegar al final o se detenga por un error en el camino.
 
-- Lenguaje Case Sensitive: es sensible al uso de mayusculas o minusculas en el codigo.
+- **Lenguaje Case Sensitive** : es sensible al uso de mayusculas o minusculas en el codigo.
 
-- Lenguaje basado en prototipos
+- **Lenguaje basado en prototipos**
 
-- Lenguaje tipado debil
+- **Lenguaje tipado debil**
 
-- Configurado en ECMAScript: es la version con la que trabajaremos con el codigo y las funcionalidades de esta version.
+- **Configurado en ECMAScript** : es la version con la que trabajaremos con el codigo y las funcionalidades de esta version.
 
 ## Variables
 
@@ -190,7 +190,7 @@ Dentro de estos encontraremos los siguientes:
     };
     ```
 
-- `for`: Ejecuta un bloque hasta que una condición especificada se evalúe como falsa, la diferencia con el bucle *while* radica que el bucle *for* se basa en una estructura ya definida donde nosotros especificamos, una variable de inicializacion, la condicion, y una expresion por iteracion.
+- `for`: Ejecuta un bloque hasta que una condición especificada se evalúe como falsa, la diferencia con el bucle **while** radica que el bucle **for** se basa en una estructura ya definida donde nosotros especificamos, una variable de inicializacion, la condicion, y una expresion por iteracion.
     ```javascript
     for ([inicializacion]; [condicion]; [expresionPorIteracion]){
         codigo a ejecutar
@@ -222,9 +222,9 @@ Dentro de estos encontraremos los siguientes:
     ```
 ### Sentencia `continue`
 
-Una sentencia es una instruccion que se le da a un proceso para alterar su flujo en la ejecucion, en los bucles podemos usar sentencias para alterar el comportamiento en los ciclos de nuestro bucle, una de las sentencias mas utilizadas es "*continue*".
+Una sentencia es una instruccion que se le da a un proceso para alterar su flujo en la ejecucion, en los bucles podemos usar sentencias para alterar el comportamiento en los ciclos de nuestro bucle, una de las sentencias mas utilizadas es `continue`.
 
-Esta instruccion se encarga de que el bucle, llegado hasta cierto punto se reinicie, ignorando lo que le sigue y volviendo a empezar, como si le dijeran a un corredor a mitad de la carrera "ve al punto de partida, pero devolviendo tus pasos", esto se usa mas que nada cuando queremos ignorar porciones de codigo de nuestro bucle que no hace falta ejecutar si se cumple un proposito y asi volver a empezar un bucle, usado mas que nada en menus.
+Esta instruccion se encarga de que el bucle, llegado hasta cierto punto se reinicie, ignorando lo que le sigue y volviendo a empezar, como si le dijeran a un corredor a mitad de la carrera "**ve al punto de partida, pero devolviendo tus pasos**", esto se usa mas que nada cuando queremos ignorar porciones de codigo de nuestro bucle que no hace falta ejecutar si se cumple un proposito y asi volver a empezar un bucle, usado mas que nada en menus.
 
 *ejemplo practico*
 ```javascript
@@ -239,10 +239,9 @@ while (i >= 0){
     i--;
 };
 ```
-
 ### Sentencia `break`
 
-Se emplea de la misma manera con la que usamos *continue* solo que a diferencia de omitir una porcion de codigo no requerida, este lo que hace es romper ese bucle, es decir, detenerlo, usado cuando ya no queremos que el bucle siga corriendo y se detenga en cierto punto.
+Se emplea de la misma manera con la que usamos `continue` solo que a diferencia de omitir una porcion de codigo no requerida, este lo que hace es romper ese bucle, es decir, detenerlo, usado cuando ya no queremos que el bucle siga corriendo y se detenga en cierto punto.
 
 *ejemplo practico*
 ```javascript
@@ -266,7 +265,7 @@ Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Bucles](.
 
 Una funcióm en JavaScript y en el ambito de la programación en general, es un bloque de codigo reutizilable cuyo proposito principal es que se pueda usar varias veces dentro de nuestro codigo sin necesidad de saturarlo.
 
-Las funciones esperan de parte nuestra una serie de parametros (opcional) para luego retornarnos un valor según las instrucciones que nosotros definamos dentro de ella.
+Las funciones esperan de parte nuestra una serie de parametros que nosotros definimos (opcional) para luego retornarnos un valor según las instrucciones que nosotros definamos dentro de ella.
 
 ### ¿Como se declara una función?
 
@@ -339,5 +338,66 @@ Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones
 
 ## POO (Programacion orientada a objetos)
 
-La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, en lugar de funciones y lógica, es decir, permite estructurar nuestro codigo de mejor forma haciendo uso de objetos que nosotros creamos y les definimos una serie de propiedades o comportamientos (clases, atributos, herencia...), esto para mejorar la logica y ordenar de mejor manera varias de las funcionalidades de nuestro codigo.
+La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, es decir, permite estructurar nuestro codigo de mejor forma haciendo uso de objetos que nosotros creamos por una clase y les definimos una serie de propiedades o comportamientos (metodos, atributos, herencia...).
 
+### ¿Como esta conformado un objeto?
+
+- **Clase** : Será el contenedor a donde van nuestros objetos una vez creados, y posteriormente identificados por esa clase.
+
+- **Objeto** : Como su nombre lo dice, es el objeto que crearemos y posteriormente agregarle propiedades u comportamientos.
+
+- **Atributo** : Es la caracteristica que tendrá nuestro objeto una vez creado, ejemplo; si un objeto tiene tal edad, es de tal color, etc..
+
+- **Metodo** : Es una funcion que define un comportamiento al objeto, como su estado o velocidad.
+
+### ¿Como creamos un objeto?
+
+Para crear nuestro primer objeto tenemos que definir una clase donde crearemos nuestro objeto y asignarle sus propiedades.
+
+```javascript
+//instancia una clase llamada animal
+class Animal{
+};
+```
+Dentro de la clase le vamos a indicar como se va a construir nuestro objeto mediante la funcion `constructor` que lo que hace es crear un objeto y sus propiedades segun los parametros recibidos, es decir, le indicaremos a la funcion constructor como y que se requiere para la creacion de nuestro objeto.
+
+```javascript
+//le indicamos a la funcion constructor, con que se va a construir nuestro objeto.
+class Animal{
+    constructor(raza, color, edad, locomocion){
+    };
+};
+```
+Posteriormente se agregan las propiedades que va a tener nuestro objeto segun la informacion que reciba el constructor, para agregarle las propiedad que queramos haremos el uso del `this` que se refiere nuestro objeto y la propiedad que tendrá.
+
+```javascript
+//el valor de this.raza será la informacion recibida por parte de los parametros del constructor
+class Animal{
+    constructor(especie, color, edad, locomocion){
+        this.especie = especie;
+    };
+};
+```
+Si el constructor recibe "perro" en el parametro "especie", usaremos esa informacion para crear una propiedad llamada especie y que tenga como valor la informacion recibida por parte del parametro.
+
+Una vez finalizada la estructura que tendra el constructor para crear nuestro objeto declararemos una variable que será el objeto que vamos a crear para luego agregarla a nuestra clase con el comando `new`.
+
+```javascript
+//creacion de la clase animal
+class Animal{
+    constructor(especie, color, edad, locomocion){
+    this.objectEspecie = especie;
+    this.objectColor = color;
+    this.objectEdad = edad;
+    this.objectLocomocion = locomocion;
+    };
+};
+
+//declaracion de nuestro objeto y adicion en la clase animal pasandole los parametros que requiere el constructor para crear nuestro objeto
+let perro = new Animal("perro", "blanco", 8, "bipedo");
+
+console.log(perro)
+```
+### Ejercicio de practica
+
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO-No-Terminado](./Ejercicio-POO/main.js) 

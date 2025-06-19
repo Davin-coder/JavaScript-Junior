@@ -59,3 +59,15 @@ componentes = `
 `;
 
 document.writeln(componentes);
+
+class carro{
+    constructor(marca, traccion, espacio){
+        this.marca = marca;
+        this.traccion = traccion;
+        this.espacioEnCabina = espacio;
+    };
+};
+
+let aventador = new carro("Ferrari", "4x4", "doble");
+
+console.log(aventador);
