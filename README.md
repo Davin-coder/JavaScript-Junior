@@ -340,15 +340,19 @@ Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones
 
 La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, es decir, permite estructurar nuestro codigo de mejor forma haciendo uso de objetos que nosotros creamos por una clase y les definimos una serie de propiedades o comportamientos (metodos, atributos, herencia...).
 
-### ¿Como esta conformado un objeto?
+### Conceptos relevantes
 
 - **Clase** : Será el contenedor a donde van nuestros objetos una vez creados, y posteriormente identificados por esa clase.
 
 - **Objeto** : Como su nombre lo dice, es el objeto que crearemos y posteriormente agregarle propiedades u comportamientos.
 
-- **Atributo** : Es la caracteristica que tendrá nuestro objeto una vez creado, ejemplo; si un objeto tiene tal edad, es de tal color, etc..
+- **Atributo** : Es una caracteristica que tendrá nuestro objeto una vez creado, ejemplo; si un objeto tiene tal edad, es de tal color, etc..
 
-- **Metodo** : Es una funcion que define un comportamiento al objeto, como su estado o velocidad.
+- **Metodo** : Es una funcion que define un comportamiento a nuestro objeto, como su estado o velocidad.
+
+- **Polimorfismo** : Es la capacidad que tiene nuestro objeto de comportarse diferente según las propiedades que tenga.
+
+- **Encapsulacion** : Se trata de ocultar los datos de un objeto al usuario dificultandole el acceso.
 
 ### ¿Como creamos un objeto?
 
@@ -395,8 +399,25 @@ class Animal{
 
 //declaracion de nuestro objeto y adicion en la clase animal pasandole los parametros que requiere el constructor para crear nuestro objeto
 let perro = new Animal("perro", "blanco", 8, "bipedo");
+```
+Una vez ya creado nuestro objeto con sus propiedades y ya asignado a una clase, accederemos a los atributos de este escribiendo el nombre del objeto y la propiedad que deseamos mostrar, Ej;
+```javascript
+console.log(perro.objectEspecie);
+//mostrará en consola el valor del atributo especie de nuestro objeto "perro"
+```
+Recordemos que tambien podemos agregarle metodos a nuestro objeto, es decir, son funciones que definen un comportamiento a nuestro objeto, esto lo logramos agregandolo como funcion dentro de una clase pero fuera del `constructor`.
 
-console.log(perro)
+```javascript
+class Figura{
+    constructor(lados, color){
+        this.objectLados = lados;
+        this.objectColor = color;
+    };
+    //funcion o metodo que mostrará la informacion del objeto
+    objectInfo(){
+        console.log
+    }
+};
 ```
 ### Ejercicio de practica
 
