@@ -1,4 +1,4 @@
-// Aqui se busca que hagas uso de la funcion promp() para pedir valores al usuario desde la pagina
+// Aqui se busca que hagas uso de la funcion prompt() para pedir valores al usuario desde la pagina
 //ejemplo;
 //let pedirValor = promp("Ingrese un valor");
 

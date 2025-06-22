@@ -423,10 +423,20 @@ class Figura{
 const triangulo = new Figura(3, "rojo", "triangulo");
 const cuadrado = new Figura(4, "azul", "cuadrado");
 
+//Llama al metodo de nuestro objeto que se encarga de mostrar su información
 triangulo.objectInfo();
 cuadrado.objectInfo();
 ```
+### Puntos clave a tener en cuenta
+- Se recomienda declarar los objetos como constantes.
 
+- La funcion `constructor` no es obligatoria si nuestra clase no requiere recibir parametros para las propiedades de nuestros objetos.
+
+- Para concatenar (unir cadenas de texto) variables a una cadena de texto de la mejor manera, se recomienda el uso de backtiks (comillas invertidas) donde contendrá nuestra cadena de texto, donde agregaremos nuestras variables haciendo uso de la sintaxis "`${variable}`".
+
+- Es recomendable que nuestras clases tengan como inicio su primer caracter en mayusculas, esto para evitar posibles confusiones entre variables u objetos.
+
+- Los metodos creados para una clase **NO** pueden ser funciones flechas ni funciones de expresión.
 ### Ejercicio de practica
 
-Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO-No-Terminado](./Ejercicio-POO/main.js)
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO](./Ejercicio-POO/main.js)
