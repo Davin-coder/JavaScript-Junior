@@ -9,7 +9,7 @@
 - [Arrays](#arrays)
 - [Bucles](#bucles)
 - [Funciones](#funciones)
-- [POO](#poo-programacion-orientada-a-objetos)
+- [POO (programacion orientada a objetos)](#poo-programacion-orientada-a-objetos)
 
 ## Introducción
 
@@ -338,7 +338,7 @@ Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones
 
 ## POO (Programacion orientada a objetos)
 
-La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, es decir, permite estructurar nuestro codigo de mejor forma haciendo uso de objetos que nosotros creamos por una clase y les definimos una serie de propiedades o comportamientos (metodos, atributos, herencia...).
+La Programación Orientada a Objetos es un paradigma de programación que organiza el diseño de software en torno a objetos, es decir, permite estructurar nuestro codigo de mejor forma haciendo uso de objetos que nosotros creamos por medio de una clase (opcional) y les definimos una serie de propiedades o comportamientos (metodos, atributos, herencia...).
 
 ### Conceptos relevantes
 
@@ -356,20 +356,72 @@ La Programación Orientada a Objetos es un paradigma de programación que organi
 
 ### ¿Como creamos un objeto?
 
-Para crear nuestro primer objeto tenemos que definir una clase donde crearemos nuestro objeto y asignarle sus propiedades.
+Existen varias formas de crear un objeto en JavaScript, la mas simple es declarandola como si fuera una variable y posteriormente inicializarla usando llaves `{}` que contendrán la información de nuestro objeto.
+```javascript
+//declaracion del objeto
+const figura = {
+    lados: 3,
+    color: "rojo",
+    nombre: "triangulo"
+};
+```
+Tambien podemos agregar metodos o acciones asociadas a nuestro objeto, esto lo logramos definiendo una función dentro del objeto.
+```javascript
+const figura = {
+    lados: 3,
+    color: "rojo",
+    nombre: "triangulo",
+    
+    //metodo que se encarga de mostrar la informacion del objeto
+    mostrarInfo() {
+        return `Hola soy un ${this.nombre}, tengo ${this.lados} lados y soy de color ${this.color}`;
+    }
+};
+//Imprime en consola la informacion retornada por el metodo mostrarInfo().
+console.log(figura.mostrarInfo());
+//Imprime en consola el valor de la propiedad "nombre" del objeto.
+console.log(figura.nombre);
+```
+Para poder referirse a las propiedades de un objeto dentro de este hacemos uso del `this` que lo que hace es buscar las propiedades de objeto en donde nos encontremos, ej; `this.nombre` buscará la propiedad "nombre" en el objeto actual.
+
+*ejemplo practico*
+```javascript
+const perro = {
+    nombre: "Max",
+    edad: 8,
+    raza: "Pastor Aleman",
+    color: "Marrón",
+    //metodo que le permité ladrar
+    ladrar(){
+        return "Wof Wof";
+    },
+    cambiarEdad(nuevaEdad){
+        this.edad = nuevaEdad;
+        return `${this.nombre} ahora tiene ${this.edad} años!!`
+    },
+    verInfo(){
+        return `Hola, me llamo ${this.nombre}, tengo ${this.edad} años, soy un ${this.raza} de color ${this.color}`
+    }
+};
+```
+### Alternativa con clase
+
+Una de las ventajas que nos da al crear un objeto mediante una clase, es que podemos asignarle propiedades predeterminadas, asi cuando vayamos a crear otro objeto similar, no hará falta escribirlas denuevo.
+
+Para crear una clase hacemos uso de la palabra reservada `class` donde posteriormente le definimos el nombre que tendrá nuestra clase.
 
 ```javascript
 //instancia una clase llamada animal
 class Animal{
 };
 ```
-Dentro de la clase le vamos a indicar como se va a construir nuestro objeto mediante la funcion `constructor` que lo que hace es crear un objeto y sus propiedades segun los parametros recibidos, es decir, le indicaremos a la funcion constructor como y que se requiere para la creacion de nuestro objeto.
+Dentro de la clase le vamos a indicar como se va a construir nuestro objeto mediante la funcion `constructor` que se encarga de crear nuestro objeto y armarlo según las propiedades que le vayamos a otorgar en los parametros de esta, es decir, el `constructor` seria ese niño artista que tu le pides dibujarte algo, y le tienes que ir dando la información acerca del dibujo que le estas pidiendo, y en base a esa información te entrega el resultado final.
 
 ```javascript
 //le indicamos a la funcion constructor, con que se va a construir nuestro objeto.
 class Animal{
-    constructor(raza, color, edad, locomocion){
-    };
+    constructor(especie, color, edad, locomocion){
+    }
 };
 ```
 Posteriormente se agregan las propiedades que va a tener nuestro objeto segun la informacion que reciba el constructor, para agregarle las propiedad que queramos haremos el uso del `this` que se refiere nuestro objeto y la propiedad que tendrá.
@@ -379,7 +431,7 @@ Posteriormente se agregan las propiedades que va a tener nuestro objeto segun la
 class Animal{
     constructor(especie, color, edad, locomocion){
         this.especie = especie;
-    };
+    }
 };
 ```
 Si el constructor recibe "perro" en el parametro "especie", usaremos esa informacion para crear una propiedad llamada especie y que tenga como valor la informacion recibida por parte del parametro.
@@ -394,7 +446,7 @@ class Animal{
     this.objectColor = color;
     this.objectEdad = edad;
     this.objectLocomocion = locomocion;
-    };
+    }
 };
 
 //declaracion de nuestro objeto y adicion en la clase animal pasandole los parametros que requiere el constructor para crear nuestro objeto
@@ -413,11 +465,11 @@ class Figura{
         this.objectNombre = nombre;
         this.objectLados = lados;
         this.objectColor = color;
-    };
+    },
     //acción que mostrará la informacion del objeto
     objectInfo(){
         console.log(`Soy un ${this.objectNombre}, tengo ${this.objectLados} lados, y soy de color ${this.objectColor}`); 
-    };
+    }
 };
 //declaracion de nuestras figuras y sus propiedades como un objeto en la clase "Figura"
 const triangulo = new Figura(3, "rojo", "triangulo");
