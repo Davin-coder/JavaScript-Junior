@@ -348,7 +348,7 @@ La Programación Orientada a Objetos es un paradigma de programación que organi
 
 - **Atributo** : Es una caracteristica que tendrá nuestro objeto una vez creado, ejemplo; si un objeto tiene tal edad, es de tal color, etc..
 
-- **Metodo** : Es una funcion que define un comportamiento a nuestro objeto, como su estado o velocidad.
+- **Metodo** : Es una funcion que define un comportamiento o accion que se realizará en relación a nuestro objeto.
 
 - **Polimorfismo** : Es la capacidad que tiene nuestro objeto de comportarse diferente según las propiedades que tenga.
 
@@ -398,33 +398,35 @@ class Animal{
 };
 
 //declaracion de nuestro objeto y adicion en la clase animal pasandole los parametros que requiere el constructor para crear nuestro objeto
-let perro = new Animal("perro", "blanco", 8, "bipedo");
+const perro = new Animal("perro", "blanco", 8, "bipedo");
 ```
 Una vez ya creado nuestro objeto con sus propiedades y ya asignado a una clase, accederemos a los atributos de este escribiendo el nombre del objeto y la propiedad que deseamos mostrar, Ej;
 ```javascript
 console.log(perro.objectEspecie);
 //mostrará en consola el valor del atributo especie de nuestro objeto "perro"
 ```
-Recordemos que tambien podemos agregarle metodos a nuestro objeto, es decir, son funciones que definen un comportamiento a nuestro objeto, esto lo logramos agregandolo como funcion dentro de una clase pero fuera del `constructor`.
+Recordemos que tambien podemos agregarle metodos a nuestro objeto, es decir, son funciones cuyo objetivo es asignarle una acción o comportamiento a nuestro objeto, esto lo logramos agregandolo como funcion dentro de la clase, fuera del `constructor`.
 
 ```javascript
 class Figura{
-    constructor(lados, color){
+    constructor(lados, color, nombre){
+        this.objectNombre = nombre;
         this.objectLados = lados;
         this.objectColor = color;
     };
-    //funcion o metodo que mostrará la informacion del objeto
+    //acción que mostrará la informacion del objeto
     objectInfo(){
-        console.log
-    }
+        console.log(`Soy un ${this.objectNombre}, tengo ${this.objectLados} lados, y soy de color ${this.objectColor}`); 
+    };
 };
+//declaracion de nuestras figuras y sus propiedades como un objeto en la clase "Figura"
+const triangulo = new Figura(3, "rojo", "triangulo");
+const cuadrado = new Figura(4, "azul", "cuadrado");
+
+triangulo.objectInfo();
+cuadrado.objectInfo();
 ```
+
 ### Ejercicio de practica
 
-Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO-No-Terminado](./Ejercicio-POO/main.js) 
-
-XXXX
-sadsda
-dasda
-dasds
-ada
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO-No-Terminado](./Ejercicio-POO/main.js)
