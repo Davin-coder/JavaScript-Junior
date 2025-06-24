@@ -29,15 +29,13 @@ Es usado tambien en distintas tecnologias Frontend como Angular, React o Vue.js 
 
 - **Lenguaje orientado a objetos** : abarca muchas de las funcionalidades que tienen los lenguajes orientado a objetos ( uso de clases, herencia, polimorfismo...).
 
-- **Lenguaje imperativo** : el codigo se ejecutará linea por linea hasta llegar al final o se detenga por un error en el camino.
+- **Lenguaje imperativo**: El codigo se ejecutará linea por linea hasta llegar al final o se detenga por un error en el camino.
 
-- **Lenguaje Case Sensitive** : es sensible al uso de mayusculas o minusculas en el codigo.
+- **Lenguaje Case Sensitive**: Es sensible al uso de mayusculas o minusculas en el codigo.
 
-- **Lenguaje basado en prototipos**
+- **Lenguaje tipado debil**: Puede convertir un tipo de dato a otro de forma automática.
 
-- **Lenguaje tipado debil**
-
-- **Configurado en ECMAScript** : es la version con la que trabajaremos con el codigo y las funcionalidades de esta version.
+- **Configurado en ECMAScript**: Es la version con la que trabajaremos con el codigo y las funcionalidades de esta version.
 
 ## Variables
 
@@ -314,7 +312,7 @@ const saludar = nombre => "hola, tu nombre es: " + nombre;
 console.log(saludar("antonio"));
 ```
 
-**ejemplo practico**
+*ejemplo practico*
 ```javascript
 const mensajeInicial = function(nombre, instruccion){
     let mensaje;
@@ -353,6 +351,8 @@ La Programación Orientada a Objetos es un paradigma de programación que organi
 - **Polimorfismo** : Es la capacidad que tiene nuestro objeto de comportarse diferente según las propiedades que tenga.
 
 - **Encapsulacion** : Se trata de ocultar los datos de un objeto al usuario dificultandole el acceso.
+
+- **Prototipos**
 
 ### ¿Como creamos un objeto?
 
@@ -404,14 +404,13 @@ const perro = {
     }
 };
 ```
-### Alternativa con clase
+### Como instancia de una clase
 
-Una de las ventajas que nos da al crear un objeto mediante una clase, es que podemos asignarle propiedades predeterminadas, asi cuando vayamos a crear otro objeto similar, no hará falta escribirlas denuevo.
+Una de las ventajas que nos da al crear un objeto como instancia de una clase, es que podemos construirlo mediante propiedades ya definidas por nosotros, asi cuando vayamos a crear otro objeto similar, no hará falta definir las propiedades denuevo.
 
 Para crear una clase hacemos uso de la palabra reservada `class` donde posteriormente le definimos el nombre que tendrá nuestra clase.
 
 ```javascript
-//instancia una clase llamada animal
 class Animal{
 };
 ```
@@ -449,7 +448,7 @@ class Animal{
     }
 };
 
-//declaracion de nuestro objeto y adicion en la clase animal pasandole los parametros que requiere el constructor para crear nuestro objeto
+//declaracion de nuestro objeto como instancia de la clase animal pasandole los parametros que requiere el constructor para crear nuestro objeto
 const perro = new Animal("perro", "blanco", 8, "bipedo");
 ```
 Una vez ya creado nuestro objeto con sus propiedades y ya asignado a una clase, accederemos a los atributos de este escribiendo el nombre del objeto y la propiedad que deseamos mostrar, Ej;
@@ -457,7 +456,7 @@ Una vez ya creado nuestro objeto con sus propiedades y ya asignado a una clase, 
 console.log(perro.objectEspecie);
 //mostrará en consola el valor del atributo especie de nuestro objeto "perro"
 ```
-Recordemos que tambien podemos agregarle metodos a nuestro objeto, es decir, son funciones cuyo objetivo es asignarle una acción o comportamiento a nuestro objeto, esto lo logramos agregandolo como funcion dentro de la clase, fuera del `constructor`.
+Recordemos que tambien podemos agregar metodos para nuestro objeto, solo que a diferencia de declarar un metodo adentro del mismo objeto, lo hacemos en la clase, creando un metodo universal para todos los objetos de esa clase, esto lo logramos agregandolo como funcion dentro de la clase, fuera del `constructor`, estos los podremos llamar como si fueran una propiedad mas del objeto que creamos.
 
 ```javascript
 class Figura{
@@ -465,7 +464,7 @@ class Figura{
         this.objectNombre = nombre;
         this.objectLados = lados;
         this.objectColor = color;
-    },
+    }
     //acción que mostrará la informacion del objeto
     objectInfo(){
         console.log(`Soy un ${this.objectNombre}, tengo ${this.objectLados} lados, y soy de color ${this.objectColor}`); 
@@ -475,10 +474,67 @@ class Figura{
 const triangulo = new Figura(3, "rojo", "triangulo");
 const cuadrado = new Figura(4, "azul", "cuadrado");
 
-//Llama al metodo de nuestro objeto que se encarga de mostrar su información
+//Llamada del metodo de nuestro objeto que se encarga de mostrar su información
 triangulo.objectInfo();
 cuadrado.objectInfo();
 ```
+### Herencia
+
+Cuando trabajamos con multiples clases u objetos en JavaScript, podemos hacer uso de la herencia para que una sub-clase o el hijo de un objeto, puedan heredar las propiedades del padre. Esto lo logramos haciendo uso de la palabra reservada `extends` para clases, y para objetos podemos hacer uso del metodo `object.create()` o por medio de prototipos.
+
+*ejemplo con clases*
+```javascript
+class Animal {
+    constructor(nombre, especie, edad){
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+    }
+    verInfo(){
+        return `Hola soy ${this.nombre}, tengo ${this.edad} años.`
+    }
+};
+//Se crea una subclase que heredará las propiedades de la clase "Animal" y a su vez se agregan mas propiedades
+//Se hace uso de la palabra super para acceder a las propiedades y metodos de la clase padre 
+class Canino extends Animal {
+    constructor(nombre, especie, edad, raza, color){
+        super(nombre, especie, edad);
+        this.raza = raza;
+        this.color = color;
+    }
+    ladrar(){
+        return "WOF WOF!"
+    }
+};
+//se crea el objeto "perro" para la clase "Canino"
+const perro = new Canino("Princesa", "Perro", 5, "pitbull", "blanco");
+
+//hereda de la clase "Animal", el metodo "verInfo()"
+console.log(perro.verInfo());
+console.log(perro.ladrar());
+```
+
+### Metodos estaticos
+
+En JavaScript existen los metodos estaticos, que son como los metodos normales, solo que a diferencia de estos, un metodo estatico se llama en vez de como propiedad del objeto, se accede directamente por la clase sin necesidad de crear un objeto antes, para crear un metodo estatico hacemos uso de la palabra reservada `static`.
+
+Cabe aclarar que un metodo estatico no requiere de las propiedades definidas por el `constructor` para funcionar.
+
+```javascript
+class Figura {
+    //Metodo estatico de la clase
+    static saludar(){
+        return "Hola"
+    }
+    static info(){
+        return `soy ${this.nombre}`
+    }
+};
+
+console.log(Figura.saludar()); //Imprime "Hola"
+console.log(Figura.info()); // Imprime "undefined" ya que no hemos definido ninguna propiedad llamada "nombre"
+```
+
 ### Puntos clave a tener en cuenta
 - Se recomienda declarar los objetos como constantes.
 
@@ -488,7 +544,15 @@ cuadrado.objectInfo();
 
 - Es recomendable que nuestras clases tengan como inicio su primer caracter en mayusculas, esto para evitar posibles confusiones entre variables u objetos.
 
-- Los metodos creados para una clase **NO** pueden ser funciones flechas ni funciones de expresión.
+- Los metodos creados para una clase u objeto **NO** pueden ser funciones flechas ni funciones de expresión.
 ### Ejercicio de practica
 
 Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO](./Ejercicio-POO/main.js)
+
+<!-- ## Metodos de Cadena
+
+## Metodos de Array
+
+## Estructura de datos con Arrays y Objetos
+
+A la hora de manejar datos usando arrays u objetos, estos traen una serie de propiedades y metodos que nos pueden facilitar el trabajo, varios de estos solo son aplicables a objetos o viceversa. -->

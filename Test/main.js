@@ -3,8 +3,7 @@ let nombre = prompt("Escriba su nombre");
 
 //uso del backtikcs para poder concatenar una variable a un texto.
 if (nombre) {
-    let titulo = `
-    <h2>Bienvenido ${nombre}</h2>`;
+    let titulo = `<h2>Bienvenido ${nombre}</h2>`;
     document.writeln(titulo);
 }else {
     let titulo2 = `
@@ -71,3 +70,5 @@ class carro{
 let aventador = new carro("Ferrari", "4x4", "doble");
 
 console.log(aventador);
+
+//
