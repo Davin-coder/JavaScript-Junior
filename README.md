@@ -340,19 +340,19 @@ La Programación Orientada a Objetos es un paradigma de programación que organi
 
 ### Conceptos relevantes
 
-- **Clase** : Será el contenedor a donde van nuestros objetos una vez creados, y posteriormente identificados por esa clase.
+- **Clase**: Será el contenedor a donde van nuestros objetos una vez creados, y posteriormente identificados por esa clase.
 
-- **Objeto** : Como su nombre lo dice, es el objeto que crearemos y posteriormente agregarle propiedades u comportamientos.
+- **Objeto**: Como su nombre lo dice, es el objeto que crearemos y posteriormente agregarle propiedades u comportamientos.
 
-- **Atributo** : Es una caracteristica que tendrá nuestro objeto una vez creado, ejemplo; si un objeto tiene tal edad, es de tal color, etc..
+- **Atributo**: Es una caracteristica que tendrá nuestro objeto una vez creado, ejemplo; si un objeto tiene tal edad, es de tal color, etc..
 
-- **Metodo** : Es una funcion que define un comportamiento o accion que se realizará en relación a nuestro objeto.
+- **Metodo**: Es una funcion que define un comportamiento o accion que se realizará en relación a nuestro objeto.
 
-- **Polimorfismo** : Es la capacidad que tiene nuestro objeto de comportarse diferente según las propiedades que tenga.
+- **Polimorfismo**: Es la capacidad que tiene nuestro objeto de comportarse diferente según las propiedades que tenga.
 
-- **Encapsulacion** : Se trata de ocultar los datos de un objeto al usuario dificultandole el acceso.
+- **Encapsulacion**: Se trata de ocultar los datos de un objeto al usuario dificultandole el acceso.
 
-- **Prototipos**
+- **Prototipos**: Son objetos de los cuales otros objetos heredan sus propiedades.
 
 ### ¿Como creamos un objeto?
 
@@ -512,6 +512,21 @@ const perro = new Canino("Princesa", "Perro", 5, "pitbull", "blanco");
 //hereda de la clase "Animal", el metodo "verInfo()"
 console.log(perro.verInfo());
 console.log(perro.ladrar());
+```
+
+*ejemplo con object.create()*
+```javascript
+const animal = {
+    sonido: "",
+    hacerSonido(){
+        console.log(this.sonido);
+    }
+};
+//de declara el objeto y se especifica de que objeto va a heredar las propiedades
+const perro = Object.create(animal);
+//ahora la propiedad "sonido" existe en el objeto perro ya que este la heredó
+perro.sonido = "WOF WOF!!"
+perro.hacerSonido();
 ```
 
 ### Metodos estaticos
