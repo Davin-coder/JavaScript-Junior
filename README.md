@@ -423,7 +423,7 @@ class Animal{
     }
 };
 ```
-Posteriormente se agregan las propiedades que va a tener nuestro objeto segun la informacion que reciba el constructor, para agregarle las propiedad que queramos haremos el uso del `this` que se refiere nuestro objeto y la propiedad que tendrá.
+Posteriormente se agregan las propiedades que va a tener nuestro objeto segun la informacion que reciba el constructor, para agregarle las propiedades a nuestro objeto hacemos uso del `this`, para poder acceder a estas propiedades, fuera del constructor, es decir, dentro de la clase.
 
 ```javascript
 //el valor de this.raza será la informacion recibida por parte de los parametros del constructor
