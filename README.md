@@ -651,6 +651,12 @@ En un Set podremos encontrar varios metodos que nos facilitan el trabajo, los pr
 Un **Map** es una colección de pares clave y valor, solo que a diferencia de un objeto normal, estas claves y valores podemos asignarlas de cualquier tipo de dato y no solo como cadenas de texto, para crear un **Map** hacemos uso de la función `Map()`.
 
 ```javascript
+let miMap = new Map();
+
+miMap.set("nombre", "alberto");
+miMap.set(1, "ID");
+
+console.log(miMap);
 ```
 ### Metodos para un Map
 

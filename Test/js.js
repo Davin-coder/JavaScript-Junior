@@ -16,10 +16,17 @@
 
 // console.log(myMap);
 
-const arrayAnimales = ["perro", "gato", "elefante", "jirafa", "tigre", "leon", "mono", "ballena", "serpiente", "oso"];
-animalesMap = new Map();
+// const arrayAnimales = ["perro", "gato", "elefante", "jirafa", "tigre", "leon", "mono", "ballena", "serpiente", "oso"];
+// animalesMap = new Map();
 
-for (i in arrayAnimales){
-    animalesMap.set(i, arrayAnimales[i]);
-}
-console.log(animalesMap);
+// for (i in arrayAnimales){
+//     animalesMap.set(i, arrayAnimales[i]);
+// }
+// console.log(animalesMap);
+
+let miMap = new Map();
+
+miMap.set("nombre", "alberto");
+miMap.set(1, "ID");
+
+console.log(miMap);
