@@ -10,10 +10,13 @@
 - [Bucles](#bucles)
 - [Funciones](#funciones)
 - [POO (programacion orientada a objetos)](#poo-programacion-orientada-a-objetos)
+- [Manejo de datos con POO](#manejo-de-datos-con-poo)
 
 ## Introducción
 
 Bienvenido a "Conociendo JavaScript", este es un repositorio creado por mi enfocado en explicar no solo la logica, si no tambien de manera clara y concisa los distintos aspectos que poseé JavaScript y como emplearlos de la mejor manera. Refuerza tu logica con los distintos ejemplos y ejercicios practicos que te voy a ofrecer aquí, y recuerda, ir practicando mientras vas aprendiendo sobre cada tema para afianzar de mejor manera los conceptos.
+
+Recuerda tener a disposición un editor de texto como Visual Studio Code, para el trabajo de los diferentes temas vistos aquí y poder acceder de mejor manera a los recursos utilizados junto a sus ejercicios de practica.
 
 ## Concepto
 
@@ -549,6 +552,52 @@ class Figura {
 console.log(Figura.saludar()); //Imprime "Hola"
 console.log(Figura.info()); // Imprime "undefined" ya que no hemos definido ninguna propiedad llamada "nombre"
 ```
+### Getters / Setters
+
+Los Setters y los Getters son funciones especiales dentro de nuestra clase u objeto, que se encargan del manejo de sus propiedades dentro de esta.
+
+En el caso de los **Getters**, los utilizamos cuando queremos obtener el valor de una propiedad en concreto, para lograrlo vamos a definir nuestro getter como si fuera una función, la diferencia es que la declararemos como un `get` haciendo alución a su finalidad que es la de obtener un valor en concreto.
+```javascript
+const libro = {
+    nombre: "100 años de seriedad",
+    autor: "Gabriel Garcia Marquez",
+    fechaDePublicacion: 1967,
+    //Buen uso de un getter
+    get getName(){
+        return this.nombre;
+    },
+    //Sin uso del get
+    getAutor(){
+        return this.autor;
+    }
+};
+
+//Se llama al getter como si fuera una propiedad del objeto
+console.log(libro.getName);
+
+//Funciona pero lo tendriamos que llamar como funcion.
+console.log(libro.getAutor());
+```
+Cuando hablamos de un **Setter** nos referimos a una función que tendrá como proposito el de modificar el valor de una de las propiedades de nuestro objeto o clase.
+```javascript
+const humano = {
+    nombre: "Diego",
+    edad: 22,
+    genero: "Masculino",
+    
+    set uptAge(nuevaEdad){
+        return this.edad = nuevaEdad;
+    },
+    get getAge(){
+        return this.edad;
+    }
+};
+console.log(humano.getAge);
+//Se accede a la función como propiedad del objeto
+humano.uptAge = 23;
+
+console.log(humano.getAge);
+```
 
 ### Puntos clave a tener en cuenta
 - Se recomienda declarar los objetos como constantes.
@@ -560,9 +609,64 @@ console.log(Figura.info()); // Imprime "undefined" ya que no hemos definido ning
 - Es recomendable que nuestras clases tengan como inicio su primer caracter en mayusculas, esto para evitar posibles confusiones entre variables u objetos.
 
 - Los metodos creados para una clase u objeto **NO** pueden ser funciones flechas ni funciones de expresión.
-### Ejercicio de practica
+
+- A la hora de crear metodos o funciones, debemos tomar en cuenta que para los objetos debemos separar estas por comas **( , )**, ya que vienen siendo como si fueran una propiedad mas del objeto, esto para clases no pasa ya que separamos las propiedades con el `constructor`. 
+
+### Ejercicios de practica
 
 Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO](./Ejercicio-POO/main.js)
+
+## Manejo de datos con POO
+
+### Sets
+
+Un **Set** en JavaScript es una colección de valores únicos, es decir, no se permiten duplicados, ni valores repetidos, ya que este mismo se hará cargo de descartarlo, cabe recalcar que los valores dentro de nuestro **set** estaran en un formato de clave y valor, donde las claves son digitos que indican la posición de nuestros valores, para crear un Map hacemos uso de la funcion `Set()`
+```javascript
+const animales = new Set();
+
+//Metodo .add() para agregar un nuevo valor a nuestro set
+animales.add("pollo");
+animales.add("gato");
+animales.add("gato");
+
+//Imprime en consola todo el set evitando duplicados
+console.log(animales);
+```
+### Metodos para un Set
+
+En un Set podremos encontrar varios metodos que nos facilitan el trabajo, los principales mas utilizados son:
+
+- **add(valor)**: Permite agregar un nuevo valor a nuestro Set, y si ya existe, no lo agrega.
+
+- **delete(valor)**: Se encarga de eliminar un elemento dentro de nuestro Set, y a su vez devuelve un valor booleano según el resultado de la tarea, sí se elimino el valor del set retorna `true`, sí no existia retorna `false`.
+
+- **has(valor)**: Verifica si un valor existe dentro del set, retorna valores booleanos según el resultado.
+
+- **clear()**: Tiene como finalidad hacer un reinicio de nuestro Set, eliminando todos los elementos dentro de este.
+
+- **size**: Propiedad de un Set que indica la cantidad de elementos dentro del Set.
+
+### Maps
+
+Un **Map** es una colección de pares clave y valor, solo que a diferencia de un objeto normal, estas claves y valores podemos asignarlas de cualquier tipo de dato y no solo como cadenas de texto, para crear un **Map** hacemos uso de la función `Map()`.
+
+```javascript
+```
+### Metodos para un Map
+
+En un Map podremos encontrar varios metodos que nos facilitan el trabajo, los principales mas utilizados son:
+
+- **set(clave, valor)**: Permite agregar un nuevo par de clave-valor en nuestro map o actualiza uno ya existente.
+
+- **get(clave)**: Obtiene el valor de una clave en concreto.
+
+- **delete(clave)**: Elimina la clave junto a su valor.
+
+- **has(clave)**: Verifica si una clave existe dentro del map, retorna valores booleanos según el resultado.
+
+- **clear()**: Hace un reinicio de nuestro map, eliminando todas las claves y sus valores.
+
+- **size**: Se encarga de mostrar la cantidad de elementos que hay en el map.
 
 <!-- ## Metodos de Cadena
 
