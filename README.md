@@ -4,11 +4,13 @@
 
 - [Introducción](#introducción)
 - [Concepto](#concepto)
-- [Variables](#variables)
-- [Operadores](#operadores)
+- [Variables](#variables-en-javascript)
+- [Operadores](#operadores-en-javascript)
+- [Condicionales](#condicionales-en-javascript)
 - [Arrays](#arrays)
-- [Bucles](#bucles)
-- [Funciones](#funciones)
+- [Bucles](#bucles-en-javascript)
+- [Funciones](#funciones-en-javascript)
+- [Metodos Nativos](#metodos-en-javascript)
 - [POO (programacion orientada a objetos)](#poo-programacion-orientada-a-objetos)
 - [Manejo de datos con POO](#manejo-de-datos-con-poo)
 
@@ -40,7 +42,7 @@ Es usado tambien en distintas tecnologias Frontend como Angular, React o Vue.js 
 
 - **Configurado en ECMAScript**: Es la version con la que trabajaremos con el codigo y las funcionalidades de esta version.
 
-## Variables
+## Variables en JavaScript
 
 ### ¿Que es una variable?
 
@@ -68,7 +70,7 @@ contamos con tres metodos principales para declarar una variable que son:
 
 - `Const` : se declara una variable que es constante, es decir, su valor no se puede cambiar una vez lo hayamos definido, y tiene un alcance de bloque.
 
-## Operadores
+## Operadores en JavaScript
 
 JavaScript tiene operadores binarios y unarios, y un operador ternario especial, el operador condicional. Un operador binario necesita dos operandos, uno antes del operador y otro después de este. `Por ejemplo 4+7`
 
@@ -98,7 +100,7 @@ Son aquellos que retornan un valor Booleano apartir de que se cumpla (o no) una 
 
 ![Operadores-logicos-img](img/Operadores-Logicos.png)
 
-## Condicionales
+## Condicionales en JavaScript
 
 Los condicionales son estructuras que permiten tomar decisiones en el codigo, ejecutando un bloque si esta se cumple o no.
 
@@ -175,7 +177,7 @@ console.log(camioneta["marca"]); //muestra en consola el valor de la clave "marc
 
 Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-arrays](./Ejercicio-arrays/main.js)
 
-## Bucles
+## Bucles en JavaScript
 
 Los bucles son aquellos ciclos que ejecutaran un bloque de codigo simultaneamente hasta que nosotros se lo indiquemos por medio de una condicion (o simplemente se ejecuten infinitamente).
 
@@ -260,7 +262,7 @@ for (coder in coders){
 
 Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Bucles](./Ejercicio-Bucles/main.js)
 
-## Funciones
+## Funciones en JavaScript
 
 ### ¿Que es una función?
 
@@ -336,6 +338,90 @@ console.log(mensajeInicial(persona, instruccion));//retorna "ten un buen dia adr
 ### Ejercicio de practica
 
 Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones](./Ejercicio-Funciones/main.js)
+
+## Metodos en JavaScript
+
+Los metodos en JavaScript son funciones que realizarán una acción asociada al objeto que le vayamos aplicar dicho metodo, es decir, son propiedades de un objeto que realizarán una accion mediante una función tanto nativa de JavaScript, como una ya creada por nosotros mismos, estos mismos se acceden con el nombre del objeto o variable junto a un punto y el nombre del metodo ("`objeto.metodo`").
+
+*ejemplos*
+```javascript
+let mensaje = "hoLa mUndO!!";
+let frase = "Hola, mi nombre es Asaf, tengo 18 años.";
+
+//Se accede al metodo nativo toUpperCase, que convertirá toda nuestra cadena de texto en mayusculas
+console.log(mensaje.toUpperCase());
+
+//Devolverá un array separando el contenido que hay entre cada coma.
+console.log(frase.split(","));
+```
+
+JavaScript poseé una variedad de metodos nativos que podemos usar según lo amerite la situación, podemos separar estos metodos en tres principales categorias que son:
+
+### Metodos de cadena
+
+Como su nombre lo dice, son funciones nativas que nos permitirán manipular una cadena de texto, entre los metodos mas importantes tenemos los siguientes:
+
+- `.concat(cadena)`: Junta dos o mas cadenas y retorna una cadena totalmente nueva.
+
+- `.length`: Devuelve la longitud de la cadena.
+
+- `.charAt(posición)`: Retorna el caracter que se encuentra en una posición especifica dentro de nuestra cadena.
+
+- `.includes(subcadena)`: Se encarga de verificar si se encuentra una sub-cadena en nuestra cadena de texto, retornando valores booleanos.
+
+- `.indexOf(caracter)`: Devuelve la posición del primer caracter de una sub-cadena dentro de nuestra cadena de texto.
+
+- `.toUpperCase()`: Convierte nuestra cadena de texto a mayúsculas.
+
+- `.toLowerCase()`: Convierte nuestra cadena de texto a minúsculas.
+
+- `.split(separador)`: Divide nuestra cadena de texto según el separador que le indiquemos retornando un array.
+
+- `.replace(cadenaAntigua, cadenaNueva)`: Reemplaza una cadena por una nueva.
+
+- `.repeat()`: Devuelve nuestra cadena repetida un numero especifico de veces, retornando así, una nueva cadena.
+
+- `.toString()`: Convierte un valor **NO** String, a un String, es decir, a una cadena de texto.
+
+- `.trim()`: Remueve espacios del principio y final de una cadena de texto.
+
+### Metodos de Arrays
+
+- `.unshift(elemento)`: Agrega uno o mas elementos al principio de un array.
+
+- `.push(elemento)`: Agrega al final de un array un nuevo elemento.
+
+- `.shift()`: Elimina el primer elemento de un array y lo retorna.
+
+- `.pop()`: Elimina el último elemento de un array y lo retorna.
+
+
+
+- `.splice(start, deleteCount, items)`: Agrega o elimina elementos.
+
+- `.slice(start, end)`: Devuelve una copia de una parte del array.
+
+- `.concat(array)`: Une arrays.
+
+- `.indexOf(value)`: Índice del valor.
+
+- `.includes(value)`: Verifica si contiene el valor.
+
+- `.forEach(callback)`: Itera sobre los elementos.
+
+- `.map(callback)`: Crea un nuevo array con los resultados.
+
+- `.filter(callback)`: Filtra elementos según condición.
+
+- `.reduce(callback, initialValue)`: Reduce a un solo valor.
+
+- `.find(callback)`: Devuelve el primer elemento que cumple una condición.
+
+
+
+### Metodos de Números
+
+
 
 ## POO (Programacion orientada a objetos)
 
@@ -636,15 +722,15 @@ console.log(animales);
 
 En un Set podremos encontrar varios metodos que nos facilitan el trabajo, los principales mas utilizados son:
 
-- **add(valor)**: Permite agregar un nuevo valor a nuestro Set, y si ya existe, no lo agrega.
+- `.add(valor)`: Permite agregar un nuevo valor a nuestro Set, y si ya existe, no lo agrega.
 
-- **delete(valor)**: Se encarga de eliminar un elemento dentro de nuestro Set, y a su vez devuelve un valor booleano según el resultado de la tarea, sí se elimino el valor del set retorna `true`, sí no existia retorna `false`.
+- `.delete(valor)`: Se encarga de eliminar un elemento dentro de nuestro Set, y a su vez devuelve un valor booleano según el resultado de la tarea, sí se elimino el valor del set retorna `True`, sí no existia retorna `False`.
 
-- **has(valor)**: Verifica si un valor existe dentro del set, retorna valores booleanos según el resultado.
+- `.has(valor)`: Verifica si un valor existe dentro del set, retorna valores booleanos según el resultado.
 
-- **clear()**: Tiene como finalidad hacer un reinicio de nuestro Set, eliminando todos los elementos dentro de este.
+- `.clear()`: Tiene como finalidad hacer un reinicio de nuestro Set, eliminando todos los elementos dentro de este.
 
-- **size**: Propiedad de un Set que indica la cantidad de elementos dentro del Set.
+- `.size`: Propiedad de un Set que indica la cantidad de elementos dentro del Set.
 
 ### Maps
 
@@ -662,22 +748,14 @@ console.log(miMap);
 
 En un Map podremos encontrar varios metodos que nos facilitan el trabajo, los principales mas utilizados son:
 
-- **set(clave, valor)**: Permite agregar un nuevo par de clave-valor en nuestro map o actualiza uno ya existente.
+- `.set(clave, valor)`: Permite agregar un nuevo par de clave-valor en nuestro map o actualiza uno ya existente.
 
-- **get(clave)**: Obtiene el valor de una clave en concreto.
+- `.get(clave)`: Obtiene el valor de una clave en concreto.
 
-- **delete(clave)**: Elimina la clave junto a su valor.
+- `.delete(clave)`: Elimina la clave junto a su valor.
 
-- **has(clave)**: Verifica si una clave existe dentro del map, retorna valores booleanos según el resultado.
+- `.has(clave)`: Verifica si una clave existe dentro del map, retorna valores booleanos según el resultado.
 
-- **clear()**: Hace un reinicio de nuestro map, eliminando todas las claves y sus valores.
+- `.clear()`: Hace un reinicio de nuestro map, eliminando todas las claves y sus valores.
 
-- **size**: Se encarga de mostrar la cantidad de elementos que hay en el map.
-
-<!-- ## Metodos de Cadena
-
-## Metodos de Array
-
-## Estructura de datos con Arrays y Objetos
-
-A la hora de manejar datos usando arrays u objetos, estos traen una serie de propiedades y metodos que nos pueden facilitar el trabajo, varios de estos solo son aplicables a objetos o viceversa. -->
+- `.size`: Se encarga de mostrar la cantidad de elementos que hay en el map.
