@@ -341,7 +341,7 @@ Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones
 
 ## Metodos en JavaScript
 
-Los metodos en JavaScript son funciones que realizarán una acción asociada al objeto que le vayamos aplicar dicho metodo, es decir, son propiedades de un objeto que realizarán una accion mediante una función tanto nativa de JavaScript, como una ya creada por nosotros mismos, estos mismos se acceden con el nombre del objeto o variable junto a un punto y el nombre del metodo ("`objeto.metodo`").
+Los metodos en JavaScript son funciones que realizarán una acción asociada al objeto que le vayamos aplicar dicho metodo, es decir, son propiedades de un objeto que realizarán una accion mediante una función tanto nativa de JavaScript, como una ya creada por nosotros mismos, estos mismos se acceden con el nombre del objeto o variable junto a un punto y el nombre del metodo ("`objeto.metodo()`").
 
 *ejemplos*
 ```javascript
@@ -387,27 +387,23 @@ Como su nombre lo dice, son funciones nativas que nos permitirán manipular una 
 
 ### Metodos de Arrays
 
+Para los arrays tenemos un amplio numero de metodos, los mas importantes y usados son los siguientes:
+
 - `.unshift(elemento)`: Agrega uno o mas elementos al principio de un array.
 
 - `.push(elemento)`: Agrega al final de un array un nuevo elemento.
 
 - `.shift()`: Elimina el primer elemento de un array y lo retorna.
 
-- `.pop()`: Elimina el último elemento de un array y lo retorna.
+- `.pop()`: Elimina el último elemento de un array y lo retorna, es decir, una vez eliminado el elemento usando pop() podremos retornar ese valor para mostrarlo o usarlo en cualquier situacion.
 
+- `.concat(array)`: Funciona exactamente igual como si lo hicieramos con cadenas, solo que en vez de cadenas, concatenamos arrays.
 
+- `.indexOf(valor)`: Devuelve el indice del valor adentro del array.
 
-- `.splice(start, deleteCount, items)`: Agrega o elimina elementos.
+- `.includes(valor)`: Se encarga de buscar un elemento o valor dentro del array, retorna valores booleanos según el resultado de busqueda.
 
-- `.slice(start, end)`: Devuelve una copia de una parte del array.
-
-- `.concat(array)`: Une arrays.
-
-- `.indexOf(value)`: Índice del valor.
-
-- `.includes(value)`: Verifica si contiene el valor.
-
-- `.forEach(callback)`: Itera sobre los elementos.
+<!-- - `.forEach(callback)`: Itera sobre los elementos.
 
 - `.map(callback)`: Crea un nuevo array con los resultados.
 
@@ -415,13 +411,21 @@ Como su nombre lo dice, son funciones nativas que nos permitirán manipular una 
 
 - `.reduce(callback, initialValue)`: Reduce a un solo valor.
 
-- `.find(callback)`: Devuelve el primer elemento que cumple una condición.
+- `.find(callback)`: Devuelve el primer elemento que cumple una condición. -->
 
+### Metodos para Números
 
+Para los numeros no tenemos tantos metodos como las cadenas de texto o arrays, aunque siempre podemos acompañarlos con los metodos dados por el objeto **Math**.
 
-### Metodos de Números
+- `parseInt(valor)`: Convierte un valor (sí es posible) en un numero entero.
 
+- `parseFloat(valor)`: Convierte un valor a un numero flotante.
 
+- `isNaN(valor)`: Verifica si el valor **NO** es un numero, retornando True sí no es un numero y False sí lo es.
+
+- `.toFixed(cantDecimales)`: Limita la cantidad de decimales que mostrará un numero flotante.
+
+- `.toExponential(digito)`: Se encarga de convertir un numero en notacion exponencial, retornando una **cadena de texto** de este mismo.
 
 ## POO (Programacion orientada a objetos)
 
