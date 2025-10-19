@@ -152,7 +152,7 @@ if (numero >= 0){
 ```
 ### Ejercicio de practica
 
-Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-condicionales](./Ejercicio-condicionales/main.js)
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-condicionales](./repositorio/1-Ejercicio-condicionales/main.js)
 
 ## ARRAYS
 
@@ -191,7 +191,7 @@ console.log(camioneta["marca"]); //muestra en consola el valor de la clave "marc
 ```
 ### Ejercicio de practica
 
-Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-arrays](./Ejercicio-arrays/main.js)
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-arrays](./repositorio/2-Ejercicio-arrays/main.js)
 
 ## Bucles en JavaScript
 
@@ -276,7 +276,7 @@ for (coder in coders){
 ```
 ### Ejercicio de practica
 
-Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Bucles](./Ejercicio-Bucles/main.js)
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Bucles](./repositorio/3-Ejercicio-Bucles/main.js)
 
 ## Funciones en JavaScript
 
@@ -353,7 +353,7 @@ console.log(mensajeInicial(persona, instruccion));//retorna "ten un buen dia adr
 ```
 ### Ejercicio de practica
 
-Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones](./Ejercicio-Funciones/main.js)
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-Funciones](./repositorio/4-Ejercicio-Funciones/main.js)
 
 ## Metodos en JavaScript
 
@@ -720,7 +720,7 @@ console.log(humano.getAge);
 
 ### Ejercicios de practica
 
-Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO](./Ejercicio-POO/main.js)
+Para acceder al ejercicio de practica dirigase a la carpeta [Ejercicio-POO](./repositorio/5-Ejercicio-POO/main.js)
 
 ## Manejo de datos con POO
 
