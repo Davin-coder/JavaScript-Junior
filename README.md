@@ -1,8 +1,35 @@
-# Conociendo JavaScript
+<div align="center">
 
-## Indice
+# Junior Travel - Conociendo JavaScript
 
-- [Introducción](#introducción)
+<img width="88" src="./public/js-logo.png">
+
+<br>
+
+### My Social Medias 📲
+
+<div align="center">
+    <a href="https://www.linkedin.com/in/davin-coder/" target="_blank">
+        <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
+    </a>
+    <a href="https://www.instagram.com/davin_coder/" target="_blank">
+        <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="instagram logo"  />
+    </a>
+    <a href="https://github.com/Davin-coder" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="25" alt="instagram logo"  />
+    </a>
+</div>
+
+</div>
+
+## Introducción
+
+Bienvenido a "Conociendo JavaScript", este es un repositorio creado por mi enfocado en explicar no solo la logica, si no tambien de manera clara y concisa los distintos aspectos que poseé JavaScript y como emplearlos de la mejor manera. Refuerza tu logica con los distintos ejemplos y ejercicios practicos que te voy a ofrecer aquí, y recuerda, ir practicando mientras vas aprendiendo sobre cada tema para afianzar de mejor manera los conceptos.
+
+Recuerda tener a disposición un editor de texto como Visual Studio Code, para el trabajo de los diferentes temas vistos aquí y poder acceder de mejor manera a los recursos utilizados junto a sus ejercicios de practica.
+
+## Indice de Temas
+
 - [Concepto](#concepto)
 - [Variables](#variables-en-javascript)
 - [Operadores](#operadores-en-javascript)
@@ -13,12 +40,6 @@
 - [Metodos Nativos](#metodos-en-javascript)
 - [POO (programacion orientada a objetos)](#poo-programacion-orientada-a-objetos)
 - [Manejo de datos con POO](#manejo-de-datos-con-poo)
-
-## Introducción
-
-Bienvenido a "Conociendo JavaScript", este es un repositorio creado por mi enfocado en explicar no solo la logica, si no tambien de manera clara y concisa los distintos aspectos que poseé JavaScript y como emplearlos de la mejor manera. Refuerza tu logica con los distintos ejemplos y ejercicios practicos que te voy a ofrecer aquí, y recuerda, ir practicando mientras vas aprendiendo sobre cada tema para afianzar de mejor manera los conceptos.
-
-Recuerda tener a disposición un editor de texto como Visual Studio Code, para el trabajo de los diferentes temas vistos aquí y poder acceder de mejor manera a los recursos utilizados junto a sus ejercicios de practica.
 
 ## Concepto
 
@@ -80,25 +101,25 @@ Un operador unario requiere solamente un operando antes o después del operador.
 ---
 Los operadores aritmeticos son los que nos permiten hacer calculos simples como resta o multiplicacion.
 
-![Operadores-Aritmeticos-img](img/Operadores-Aritmeticos.png)
+![Operadores-Aritmeticos-img](./public/img/Operadores-Aritmeticos.png)
 
 ### Operadores de comparación
 ---
 Son aquellos que nos permiten comparar dos variables entre si y lanzar una respuesta según el resultado de esa comparación.
 
-![Operadores-Comparacion-img](img/Operadores-Comparacion.png)
+![Operadores-Comparacion-img](./public/img/Operadores-Comparacion.png)
 
 ### Operadores Asignación
 ---
 Los operadores de asignación son aquellos que usamos para agregarle o cambiarle el valor a una variable ya existente.
 
-![Operadores-Asignacion-img](img/Operadores-Asignacion.png)
+![Operadores-Asignacion-img](./public/img/Operadores-Asignacion.png)
 
 ### Operadores Lógicos
 ---
 Son aquellos que retornan un valor Booleano apartir de que se cumpla (o no) una condición.
 
-![Operadores-logicos-img](img/Operadores-Logicos.png)
+![Operadores-logicos-img](./public/img/Operadores-Logicos.png)
 
 ## Condicionales en JavaScript
 
