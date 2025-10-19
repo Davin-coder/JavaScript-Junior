@@ -2,9 +2,7 @@
 
 # Junior Travel - Conociendo JavaScript
 
-<img width="88" src="./public/js-logo.png">
-
-<br>
+<img width="88" style="margin: 5px 0 40px 0" src="./public/js-logo.png">
 
 ### My Social Medias 📲
 
